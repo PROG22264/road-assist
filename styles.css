@@ -1,0 +1,307 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --text-color: #333;
+    --background-color: #f0f2f5;
+}
+
+body, html {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.card a{
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px;
+}
+
+.card a:hover {
+    background-color: #2980b9;
+}
+
+button{
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+main {
+    padding-top: 80px;
+}
+
+#hero {
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+#services {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 4rem 1rem;
+    position: relative;
+}
+
+.wave-top {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23f0f2f5" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>') no-repeat;
+    background-size: cover;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: rgb(228, 245, 255);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 4px 4px 10px 4px #08121c;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 10px 0px #bbd6f1;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3, .card p {
+    padding: 0.5rem 1rem;
+    color: var(--text-color);
+}
+
+.card button {
+    margin: 1rem;
+    align-self: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+input {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.membership-plans {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.plan-card {
+    width: 200px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #2c3e50;
+    border: 1px solid #17212b;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px 3px  #00000065;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 100px;
+}
+
+.plan-card h3{
+    color:#fff;
+}
+
+.plan-card button{
+    background-color: #1c2b3b;
+    border: 1px solid #00000085;
+    box-shadow: 0px 0px 4px 1px  #000000ac;
+    transition: ease all 0.5s;
+}
+
+.plan-card button:hover{
+    color: #51a2d8;
+    box-shadow: 0px 0px 3px 1px  #233241f6;
+}
+
+.plan-card:hover {
+    /* transform: translate z(-5px); */
+    transform: scale(1.060);
+    z-index: 2;
+    box-shadow: 0px 0px 6px 3px  #0000009e;
+}
+
+.price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #8fff92;
+    /* border: 0.5px solid   #525f6d; */
+    border-radius: 5px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 5px;
+    box-shadow: 0px 0px 3.5px 1px  #00000073;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}
+
+#dashboard {
+    position:unset;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    gap: 100px
+}
+
+#dashboard-content {
+    background-color: #2c3e50f6;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 00px;
+    gap: 30px;
+}
+#dashboard-content  h2{
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        margin-bottom: 2rem;
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoadAssist Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">RoadAssist Pro</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="login-btn" onclick="showLoginForm()">Login</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Assistance that <span class="highlight">Inspires</span> Confidence</h1>
+            <p>RoadAssist Pro is your premier partner for reliable roadside assistance.</p>
+            <button onclick="showLoginForm()">Get Started</button>
+        </section>
+
+        <section id="services">
+            <div class="wave-top"></div>
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <img src="tow_truck_image.jpg" alt="Instant Help">
+                    <h3> Get Instant Help</h3>
+                    <p>Get immediate assistance for your vehicle breakdowns.</p>
+                    <a href="#dashboard" , onclick="getInstantHelp()">Get Instant Help</a>
+                    <!-- <button onclick="getInstantHelp()">Get Help Now</button> -->
+                </div>
+                <div class="card">
+                    <img src="membership_card_image.jpg" alt="Membership">
+                    <h3>Membership Plans</h3>
+                    <p>Join our premium membership for priority service.</p>
+                    <a href="#dashboard" , onclick="showMembershipPlans()">Get Membership</a>
+                    <!-- <button onclick="showMembershipPlans()">View Plans</button> -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginForm()">&times;</span>
+            <h2>Login to RoadAssist Pro</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="tel" id="phone" placeholder="Phone Number">
+            <button onclick="sendOTP()">Get OTP</button>
+            <input type="text" id="otp" placeholder="Enter OTP">
+            <button onclick="verifyOTP()">Login</button>
+        </div>
+    </div>
+
+    <section id="dashboard">
+    <div id="dashboard" style="display: none;">
+        <!-- Dashboard content will be loaded here -->
+    </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
